@@ -1,12 +1,16 @@
-import { mount } from "@vue/test-utils";
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  mount
+} from "@vue/test-utils";
+import {
+  createRouter,
+  createWebHistory
+} from "vue-router";
 import AuthView from "../../src/views/AuthView";
 import HomeView from "../../src/views/HomeView";
 import authChecker from "../../src/router/router_helper";
 import App from "../../src/App.vue";
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "home",
     component: HomeView,
@@ -16,7 +20,7 @@ const routes = [
   },
   {
     path: "/login",
-    name: "auth",
+    name: "login",
     component: AuthView,
   },
 ];

@@ -29,11 +29,15 @@ $secondary-text-color: #737373;
     .login-quote {
         line-height: 100vh;
         font-size: 28px;
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     .login-form-container {
-        height: 350px;
-        min-width: 400px;
+        min-height: 380px;
+        min-width: 425px;
         max-width: 600px;
         border: 2px solid $primary-border-color;
         padding: 25px;
@@ -46,7 +50,7 @@ $secondary-text-color: #737373;
         padding: 7px;
 
         img {
-            padding: px;
+            padding: 12px;
             height: 96px;
             width: 96px;
         }

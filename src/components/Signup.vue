@@ -19,9 +19,16 @@
           <input type="password" class="form-control form-control-input-text" id="user-password"
             placeholder="Enter a strong password">
         </div>
+        <div class="form-control-container mt-5">
+          <span class="form-control-label">
+            {{ strings.confirm_password }}
+          </span>
+          <input type="password" class="form-control form-control-input-text" id="user-password"
+            placeholder="Confirm your password">
+        </div>
         <div class="form-submit-btn mt-5">
-          <button type="button" class="btn btn-outline-primary">{{ strings.login }}</button>
-          <router-link to="/signup" class="d-block mt-3">{{ strings.signup }}</router-link>
+          <button type="button" class="btn btn-outline-primary">{{ strings.signup }}</button>
+          <router-link to="/login" class="d-block mt-3">{{ strings.login }}</router-link>
         </div>
       </div>
     </div>
@@ -29,14 +36,15 @@
 </template>
 
 <script>
-
+import LeftBarQuote from './LeftBarQuote.vue';
 export default {
-  name: "LogIn",
+  name: "SignUp",
   data() {
     return {
       strings: {
         "email": "Email",
         "password": "Password",
+        "confirm_password": "Confirm Password",
         "login": "Login",
         "signup": "Signup"
       }
@@ -45,3 +53,7 @@ export default {
   props: {},
 };
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped></style>
+

@@ -1,12 +1,15 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory
+} from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AuthView from "../views/AuthView.vue";
 import Login from "../components/Login.vue";
+import Signup from "../components/Signup.vue";
 import store from "../store";
 import authChecker from "./router_helper";
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "home",
     component: HomeView,
@@ -18,11 +21,15 @@ const routes = [
     path: "/login",
     name: "auth",
     component: AuthView,
-    children: [
-      {
+    children: [{
         path: "/login",
         name: "login",
         component: Login,
+      },
+      {
+        path: "/signup",
+        name: "signup",
+        component: Signup,
       },
     ],
   },
