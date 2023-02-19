@@ -1,0 +1,78 @@
+$primary: #000000;
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+$font-stack: Helvetica,
+sans-serif;
+
+
+
+$primary-color: #000000;
+
+$primary-text-color: #252B42;
+$primary-text-light: #FFFFFF;
+
+$primary-border-color: #000000;
+$primary-border-light: #FFFFFF;
+
+$secondary-text-color: #737373;
+
+
+.body-view {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+
+    .bordering-right {
+        border-right: 2px solid $primary-border-color;
+    }
+
+    .login-quote {
+        line-height: 100vh;
+        font-size: 28px;
+    }
+
+    .login-form-container {
+        height: 350px;
+        min-width: 400px;
+        max-width: 600px;
+        border: 2px solid $primary-border-color;
+        padding: 25px;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 7px;
+
+        img {
+            padding: px;
+            height: 96px;
+            width: 96px;
+        }
+    }
+}
+
+.form-control-container {
+    text-align: left;
+
+    .form-control-input-text {
+        border: none;
+        border-radius: 0px;
+        border-bottom: 1px solid$primary-border-color;
+        margin-top: 10px;
+
+    }
+
+    .form-control-label {}
+
+    .form-control:focus {
+        box-shadow: 0 1px 0 0 #000000;
+    }
+
+    .form-submit-btn {
+        .btn-outline-primary {
+            border: 1px $primary-border-color;
+        }
+    }
+}
