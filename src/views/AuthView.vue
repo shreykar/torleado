@@ -4,6 +4,9 @@
       <LeftBarQuote />
       <router-view />
     </div>
+    <div class="logo">
+      <img src="..//assets/logo.png" sizes="196x196" />
+    </div>
   </div>
 </template>
 

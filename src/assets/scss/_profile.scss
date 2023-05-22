@@ -1,0 +1,110 @@
+.profile-container {
+    background-color: $primary;
+    padding: 50px;
+    color: $primary-text-light;
+
+    .name-count {
+        text-align: center;
+    }
+
+    .header-name {
+        font-size: 28px;
+        text-transform: uppercase;
+    }
+
+    .follower-count {
+        font-size: 14px;
+        display: flex;
+        list-style: none;
+        list-style-type: none;
+        justify-content: space-around;
+    }
+
+    .profile-banner {
+        width: 100%;
+        max-height: 400px;
+        max-width: 400px;
+        margin-top: 60px;
+        margin-left: 15px;
+    }
+
+    .interest-badges {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        .badge {
+            background: #b7b7b770 !important;
+            color: $primary-text-light !important;
+            font-size: small;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+    }
+
+    .header {
+        text-align: left;
+    }
+
+    .intro {
+        white-space: normal;
+        text-align: left;
+        height: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .card {
+        background: #1e252b;
+        height: 200px;
+        width: 100% !important;
+        max-width: 450px;
+        font-weight: 150;
+
+        .card-title {
+            font-weight: 200;
+            text-align: left;
+            font-size: 24px;
+        }
+
+        .card-text {
+            text-align: left;
+        }
+    }
+
+    .card-fl {
+        max-width: 100%;
+        max-height: 150px;
+        text-align: left;
+        font-weight: 150;
+    }
+
+
+    .bi {
+        font-size: 14px;
+    }
+
+    .bi-instagram {
+        color: #fa7e1e;
+    }
+
+    .bi-tiktok {
+        color: #ff0050;
+    }
+
+    .bi-twitter {
+        color: #00acee;
+    }
+
+    .bi-linkedin {
+        color: #0072b1;
+    }
+
+    .bi-snapchat {
+        color: #FFFC00;
+    }
+
+    .bi-youtube {
+        color: #c4302b;
+    }
+}

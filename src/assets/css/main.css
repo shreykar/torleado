@@ -10769,6 +10769,177 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.form-control-container {
+  text-align: left;
+}
+.form-control-container .form-control {
+  border: none;
+  border-radius: 0px;
+  margin-top: 10px;
+  -webkit-transition: border-width 20ms ease;
+}
+.form-control-container .form-control-label {
+  color: #252B42;
+  font-size: 14px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+  white-space: nowrap;
+}
+.form-control-container .form-control:focus {
+  box-shadow: none;
+  border-bottom: 3px solid #000000;
+}
+.form-control-container .form-control-input-text-area:focus {
+  box-shadow: none;
+  border: 2px solid #000000;
+}
+.form-control-container .form-submit-btn .btn-outline-primary {
+  border: 1px #000000;
+}
+.form-control-container .form-control-input-text {
+  border-bottom: 1px solid #000000;
+}
+.form-control-container .form-control-input-file {
+  border: 1px solid #000000;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+.form-control-container .form-control-input-text-area {
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+.form-control-container .form-control-input-tags {
+  border: none;
+}
+.form-control-container .form-control-input-tags .vue-tags-input {
+  border: none;
+  min-width: 100%;
+}
+.form-control-container .form-control-input-tags .vue-tags-input .ti-input {
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+.form-control-container .form-control-input-tags .vue-tags-input .ti-tag {
+  background: #FFFFFF;
+  color: #252B42;
+  border: 1px solid #000000;
+  padding: 4px 8px 4px 8px;
+  font-size: 14px;
+  border-radius: 10px;
+  max-width: 175px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#auth .login-quote {
+  line-height: 100vh;
+  font-size: 28px;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#auth .login-form-container {
+  min-height: 380px;
+  min-width: 425px;
+  max-width: 600px;
+  border: 2px solid #000000;
+  padding: 25px;
+}
+
+.profile-container {
+  background-color: #000000;
+  padding: 50px;
+  color: #FFFFFF;
+}
+.profile-container .name-count {
+  text-align: center;
+}
+.profile-container .header-name {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.profile-container .follower-count {
+  font-size: 14px;
+  display: flex;
+  list-style: none;
+  list-style-type: none;
+  justify-content: space-around;
+}
+.profile-container .profile-banner {
+  width: 100%;
+  max-height: 400px;
+  max-width: 400px;
+  margin-top: 60px;
+  margin-left: 15px;
+}
+.profile-container .interest-badges {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.profile-container .interest-badges .badge {
+  background: rgba(183, 183, 183, 0.4392156863) !important;
+  color: #FFFFFF !important;
+  font-size: small;
+  font-weight: 300;
+  margin-top: 10px;
+}
+.profile-container .header {
+  text-align: left;
+}
+.profile-container .intro {
+  white-space: normal;
+  text-align: left;
+  height: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.profile-container .card {
+  background: #1e252b;
+  height: 200px;
+  width: 100% !important;
+  max-width: 450px;
+  font-weight: 150;
+}
+.profile-container .card .card-title {
+  font-weight: 200;
+  text-align: left;
+  font-size: 24px;
+}
+.profile-container .card .card-text {
+  text-align: left;
+}
+.profile-container .card-fl {
+  max-width: 100%;
+  max-height: 150px;
+  text-align: left;
+  font-weight: 150;
+}
+.profile-container .bi {
+  font-size: 14px;
+}
+.profile-container .bi-instagram {
+  color: #fa7e1e;
+}
+.profile-container .bi-tiktok {
+  color: #ff0050;
+}
+.profile-container .bi-twitter {
+  color: #00acee;
+}
+.profile-container .bi-linkedin {
+  color: #0072b1;
+}
+.profile-container .bi-snapchat {
+  color: #FFFC00;
+}
+.profile-container .bi-youtube {
+  color: #c4302b;
+}
+
 .body-view {
   height: 100vh;
   text-align: center;
@@ -10777,43 +10948,21 @@ textarea.form-control-lg {
 .body-view .bordering-right {
   border-right: 2px solid #000000;
 }
-.body-view .login-quote {
-  line-height: 100vh;
-  font-size: 28px;
-}
-.body-view .login-form-container {
-  height: 350px;
-  min-width: 400px;
-  max-width: 600px;
-  border: 2px solid #000000;
-  padding: 25px;
-}
-.body-view .logo {
+
+.logo {
   position: absolute;
   top: 0;
   right: 0;
   padding: 7px;
 }
-.body-view .logo img {
-  padding: px;
+.logo img {
+  padding: 12px;
   height: 96px;
   width: 96px;
 }
 
-.form-control-container {
-  text-align: left;
-}
-.form-control-container .form-control-input-text {
-  border: none;
-  border-radius: 0px;
-  border-bottom: 1px solid #000000;
-  margin-top: 10px;
-}
-.form-control-container .form-control:focus {
-  box-shadow: 0 1px 0 0 #000000;
-}
-.form-control-container .form-submit-btn .btn-outline-primary {
-  border: 1px #000000;
+.edit-profile-form-container {
+  padding-top: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */

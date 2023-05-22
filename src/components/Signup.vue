@@ -9,25 +9,25 @@
           <span class="form-control-label">
             {{ strings.email }}
           </span>
-          <input type="email" class="form-control form-control-input-text" id="user-email"
+          <input v-model="email" type="email" class="form-control form-control-input-text" id="user-email"
             placeholder="shreykar@torelado.com">
         </div>
         <div class="form-control-container mt-5">
           <span class="form-control-label">
             {{ strings.password }}
           </span>
-          <input type="password" class="form-control form-control-input-text" id="user-password"
+          <input v-model="password" type="password" class="form-control form-control-input-text" id="user-password"
             placeholder="Enter a strong password">
         </div>
         <div class="form-control-container mt-5">
           <span class="form-control-label">
             {{ strings.confirm_password }}
           </span>
-          <input type="password" class="form-control form-control-input-text" id="user-password"
+          <input v-model="confirm" type="password" class="form-control form-control-input-text" id="user--confirm-password"
             placeholder="Confirm your password">
         </div>
         <div class="form-submit-btn mt-5">
-          <button type="button" class="btn btn-outline-primary">{{ strings.signup }}</button>
+          <button  @click.prevent="submitted"  type="button" class="btn btn-outline-primary">{{ strings.signup }}</button>
           <router-link to="/login" class="d-block mt-3">{{ strings.login }}</router-link>
         </div>
       </div>
@@ -36,11 +36,21 @@
 </template>
 
 <script>
-import LeftBarQuote from './LeftBarQuote.vue';
+import { signup } from "../services/auth";
+import { useVuelidate } from '@vuelidate/core'
+import { required, email, maxLength } from '@vuelidate/validators'
+import { mapActions } from 'vuex'
+
 export default {
+  setup() {
+    return { v$: useVuelidate() }
+  },
   name: "SignUp",
   data() {
     return {
+      email: "",
+      password: "",
+      confirm: "",
       strings: {
         "email": "Email",
         "password": "Password",
@@ -50,10 +60,38 @@ export default {
       }
     }
   },
-  props: {},
+  validations() {
+    return {
+      email: { required, email },
+      password: {
+        required,
+        maxLength: maxLength(50),
+      }
+    }
+  },
+  methods: {
+    ...mapActions('user',[
+      'login'
+    ]),
+    submitted() {
+      this.v$.$touch();
+      if (this.v$.$invalid) {
+        return;
+      }
+      signup({ email: this.email, password: this.password }).then((result) => {
+        if(result.data.user && result.data.user.id){
+          this.login(result.data.user)
+          this.$router.push({ path: '/edit-profile' })
+        }
+      }).catch((err) => {
+        console.log(err)
+      });
+    }
+  },
+  mounted() {
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped></style>
-

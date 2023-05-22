@@ -1,0 +1,77 @@
+.form-control-container {
+    text-align: left;
+
+
+    .form-control {
+        border: none;
+        border-radius: 0px;
+        margin-top: 10px;
+        -webkit-transition: border-width 20ms ease;
+    }
+
+    .form-control-label {
+        color: $primary-text-color;
+        font-size: $text-size-label;
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+        white-space: nowrap;
+    }
+    .form-control:focus {
+        box-shadow: none;
+        border-bottom: 3px solid$primary-border-color;
+    }
+
+    .form-control-input-text-area:focus {
+        box-shadow: none;
+        border: 2px solid$primary-border-color;
+    }
+
+    .form-submit-btn {
+        .btn-outline-primary {
+            border: 1px $primary-border-color;
+        }
+    }
+
+    .form-control-input-text {
+        border-bottom: 1px solid$primary-border-color;
+    }
+
+    .form-control-input-file {
+        border: 1px solid$primary-border-color;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+
+    .form-control-input-text-area {
+        border: 1px solid$primary-border-color;
+        border-radius: 4px;
+    }
+
+    .form-control-input-tags {
+        border: none;
+
+        .vue-tags-input {
+            border: none;
+            min-width: 100%;
+
+            .ti-input {
+                border: none;
+                border-bottom: 1px solid$primary-border-color;
+            }
+
+            .ti-tag {
+                background: $primary-bg-color;
+                color: $primary-text-color;
+                border: 1px solid$primary-border-color;
+                padding: 4px 8px 4px 8px;
+                font-size: 14px;
+                border-radius: 10px;
+                max-width: 175px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+}

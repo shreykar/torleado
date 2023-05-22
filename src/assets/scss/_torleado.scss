@@ -1,0 +1,28 @@
+.body-view {
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    .bordering-right {
+        border-right: 2px solid $primary-border-color;
+    }
+
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 7px;
+
+    img {
+        padding: 12px;
+        height: 96px;
+        width: 96px;
+    }
+}
+
+
+.edit-profile-form-container{
+    padding-top: 50px;
+
+}

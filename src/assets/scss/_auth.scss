@@ -1,0 +1,18 @@
+#auth {
+    .login-quote {
+        line-height: 100vh;
+        font-size: 28px;
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .login-form-container {
+        min-height: 380px;
+        min-width: 425px;
+        max-width: 600px;
+        border: 2px solid $primary-border-color;
+        padding: 25px;
+    }
+}
